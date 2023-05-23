@@ -1,12 +1,12 @@
+import {useDark, useToggle} from '@vueuse/core';
+import * as languageChange from "@/tool/languageChange.js";
+
 // 定义枚举
 export const Theme = {
     LIGHT: 'light',
     DARK: 'dark',
     AUTO: 'auto',
 };
-
-// 从localStorage中获取主题
-import {useDark, useToggle} from '@vueuse/core';
 
 // 获取主题
 export function getTheme() {
@@ -18,11 +18,11 @@ export function getThemeName() {
     let theme = getTheme();
     switch (theme) {
         case Theme.LIGHT:
-            return '浅色主题';
+            return languageChange.i18n.global.t('theme.light');
         case Theme.DARK:
-            return '深色主题';
+            return languageChange.i18n.global.t('theme.dark');
         case Theme.AUTO:
-            return '自动主题';
+            return languageChange.i18n.global.t('theme.auto');
         default:
     }
 }

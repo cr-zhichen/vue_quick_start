@@ -7,6 +7,7 @@ import router from './router/index'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import hljs from 'highlight.js';
+import * as languageChange from "@/tool/languageChange.js";
 
 // 使用 createApp 创建 Vue 应用实例
 const app = createApp(App)
@@ -18,6 +19,9 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 // 使用路由配置和代码高亮插件
 app.use(router)
 app.use(hljs)
+
+// 使用 i18n 实例
+app.use(languageChange.i18n)
 
 // 创建并使用自定义指令 'highlight'，用于高亮代码块
 app.directive('highlight', (el) => {

@@ -10,8 +10,8 @@ const goToHome = useGoToHome();
 
 <template>
     <div id="notFoundPage">
-        <h1>404NotFound</h1>
-        <el-button @click="goToHome">回到主页</el-button>
+        <h1>{{ $t('notFoundPage.title') }}</h1>
+        <el-button @click="goToHome">{{ $t('notFoundPage.goHomeButton') }}</el-button>
     </div>
 </template>
 
