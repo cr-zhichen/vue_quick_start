@@ -7,6 +7,7 @@ export default {
     homePage: {
         title: '主页',
         notFoundButton: '404页面',
+        swatchThemeButton: '切换主题',
     },
     notFoundPage: {
         title: '未找到页面',

@@ -7,6 +7,7 @@ export default {
     homePage: {
         title: 'Home Page',
         notFoundButton: '404 Page',
+        swatchThemeButton: 'Swatch Theme',
     },
     notFoundPage: {
         title: 'Not Found Page',

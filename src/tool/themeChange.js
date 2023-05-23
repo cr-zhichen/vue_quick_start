@@ -1,5 +1,6 @@
 import {useDark, useToggle} from '@vueuse/core';
 import * as languageChange from "@/tool/languageChange.js";
+import {Moon, Sunny, Sunrise} from "@element-plus/icons-vue";
 
 // 定义枚举
 export const Theme = {
@@ -14,15 +15,15 @@ export function getTheme() {
 }
 
 // 获取主题名称
-export function getThemeName() {
+export function getThemeIcon() {
     let theme = getTheme();
     switch (theme) {
         case Theme.LIGHT:
-            return languageChange.i18n.global.t('theme.light');
+            return Sunny;
         case Theme.DARK:
-            return languageChange.i18n.global.t('theme.dark');
+            return Moon;
         case Theme.AUTO:
-            return languageChange.i18n.global.t('theme.auto');
+            return Sunrise;
         default:
     }
 }
