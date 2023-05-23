@@ -60,8 +60,6 @@ export function toggleLanguage() {
             setLanguage('zh-CN');
             break;
     }
-    // 刷新页面
-    window.location.reload();
 }
 
 // 获取全部语言

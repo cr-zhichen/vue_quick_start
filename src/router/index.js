@@ -1,5 +1,5 @@
 // 导入router所需的方法
-import {createRouter, createWebHistory} from 'vue-router'
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 
 // 导入路由页面的配置
 import routes from './routes'
@@ -7,7 +7,7 @@ import routes from './routes'
 // 路由参数配置
 const router = createRouter({
     // 使用hash(createWebHashHistory)模式，(createWebHistory是HTML5历史模式，支持SEO)
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: routes,
 })
 
